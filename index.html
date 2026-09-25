@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Kalynn's Personal Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <header>
@@ -24,8 +24,15 @@
     <!-- Profile Section -->
     <section id="profile">
       <h2>Profile</h2>
-      <p>I'm Kalynn Loftis, graduating December 2026 from LSU's E. J. Ourso College of Business with dual degrees: a B.S. in Accounting and a B.S. in Information Systems and Analytics (GPA 3.55). I have hands-on experience in audit and tax, and I'll be joining Deloitte as an Audit &amp; Assurance Associate in summer 2027.</p>
-      <p>Member of Alpha Kappa Psi Professional Business Fraternity and 2025 Jimmy Webb Memorial Merit-Based Scholarship winner.</p>
+      <div class="profile-container" style="display: flex; align-items: center; gap: 2rem; margin-top: 1rem;">
+        <div class="profile-photo-wrapper" style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center;">
+          <img src="kalynn-headshot.jpg" alt="Professional headshot of Kalynn Loftis in business attire" class="profile-photo" style="width: 100%; height: 100%; object-fit: cover; object-position: center 45%; transform: scale(1.8) translateY(-4%); transform-origin: center 45%; display: block;">
+        </div>
+        <div class="profile-text" style="flex: 1;">
+          <p>I'm Kalynn Loftis, graduating December 2026 from LSU's E. J. Ourso College of Business with dual degrees: a B.S. in Accounting and a B.S. in Information Systems and Analytics (GPA 3.55). I have hands-on experience in audit and tax, and I'll be joining Deloitte as an Audit &amp; Assurance Associate in summer 2027.</p>
+          <p style="margin-bottom: 0;">Member of Alpha Kappa Psi Professional Business Fraternity and 2025 Jimmy Webb Memorial Merit-Based Scholarship winner.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
