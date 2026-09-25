@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <header>
@@ -23,8 +23,8 @@
     </div>
   </header>
 
-  <!-- Homepage Hero Header -->
-  <section class="hero-header">
+  <!-- Homepage Hero Header (Edge-to-Edge, Square Corners) -->
+  <div class="hero-header">
     <div class="hero-container">
       <div class="hero-headshot-wrapper">
         <img src="kalynn-headshot.jpg" alt="Professional headshot of Kalynn Loftis in business attire" class="hero-headshot">
@@ -39,65 +39,149 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <main>
-    <!-- Profile Section -->
-    <section id="profile">
-      <h2>Profile</h2>
-      <p>I'm Kalynn Loftis, graduating December 2026 from LSU's E. J. Ourso College of Business with dual degrees: a B.S. in Accounting and a B.S. in Information Systems and Analytics (GPA 3.55). I have hands-on experience in audit and tax, and I'll be joining Deloitte as an Audit &amp; Assurance Associate in summer 2027.</p>
-      <p>Member of Alpha Kappa Psi Professional Business Fraternity and 2025 Jimmy Webb Memorial Merit-Based Scholarship winner.</p>
+    <!-- Quick-Stats Row (Overlapping the Hero by 30px) -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value">3.6</div>
+        <div class="stat-label">GPA</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">Big 4</div>
+        <div class="stat-label">Audit Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">2</div>
+        <div class="stat-label">Internships</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value stat-value-sm">Alpha Kappa Psi</div>
+        <div class="stat-label">Professional Business Fraternity</div>
+      </div>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>I'm a senior at LSU studying Accounting and Information Systems and Analytics, graduating December 2026. I've gained hands-on audit and tax experience through internships at Deloitte and Rainier Wealth Planning, and I'm a 2025 Jimmy Webb Memorial Scholarship recipient.</p>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
       <h2>Skills</h2>
-      <div class="tags">
-        <span class="tag">Auditing</span>
-        <span class="tag">GAAP &amp; FASB</span>
-        <span class="tag">Excel (pivot tables)</span>
-        <span class="tag">Oracle PL/SQL</span>
-        <span class="tag">Database Management</span>
-        <span class="tag">BI Tools</span>
-        <span class="tag">Intuit ProConnect</span>
-        <span class="tag">Inventory Control</span>
-        <span class="tag">Git &amp; GitHub</span>
-        <span class="tag">AI-Assisted Development</span>
+      <div class="skills-grid">
+        <!-- Accounting & Audit Card -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
+              <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+              <path d="M12 6v2m0 8v2"/>
+            </svg>
+            <h3 class="skill-category-title">Accounting &amp; Audit</h3>
+          </div>
+          <div class="tags">
+            <span class="tag">Auditing</span>
+            <span class="tag">GAAP &amp; FASB</span>
+            <span class="tag">Inventory Control</span>
+            <span class="tag">Intuit ProConnect</span>
+          </div>
+        </div>
+
+        <!-- Data & Technology Card -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M3 5V19A9 3 0 0 0 21 19V5"/>
+              <path d="M3 12A9 3 0 0 0 21 12"/>
+            </svg>
+            <h3 class="skill-category-title">Data &amp; Technology</h3>
+          </div>
+          <div class="tags">
+            <span class="tag">Oracle PL/SQL</span>
+            <span class="tag">Database Management</span>
+            <span class="tag">BI Tools</span>
+            <span class="tag">Excel (pivot tables)</span>
+          </div>
+        </div>
+
+        <!-- Development Tools Card -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            <h3 class="skill-category-title">Development Tools</h3>
+          </div>
+          <div class="tags">
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag">AI-Assisted Development</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience Timeline Section -->
     <section id="experience">
       <h2>Experience</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Audit &amp; Assurance Intern</h3>
-          <p><strong>Deloitte</strong> &bull; <em>San Francisco, CA</em> &bull; <em>May 2026 – Aug 2026</em></p>
-          <p>Supported inventory cutoff and cost of goods sold testing and updated audit workpapers.</p>
+      <div class="timeline">
+        <!-- Deloitte (Most Recent - Gold Dot) -->
+        <div class="timeline-item">
+          <div class="timeline-dot dot-gold"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Audit &amp; Assurance Intern</h3>
+            <p class="timeline-meta"><strong>Deloitte</strong> &bull; <em>San Francisco, CA</em> &bull; <em>May 2026 – Aug 2026</em></p>
+            <p class="timeline-desc">Supported inventory cutoff and cost of goods sold testing and updated audit workpapers.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Tax Intern</h3>
-          <p><strong>Rainier Wealth Planning</strong> &bull; <em>Baton Rouge, LA</em> &bull; <em>Feb 2025 – May 2025</em></p>
-          <p>Prepared tax workpapers for 50+ clients across sole proprietorships, partnerships/LLCs, and S-corps.</p>
+
+        <!-- Rainier Wealth Planning (Purple Dot) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Tax Intern</h3>
+            <p class="timeline-meta"><strong>Rainier Wealth Planning</strong> &bull; <em>Baton Rouge, LA</em> &bull; <em>Feb 2025 – May 2025</em></p>
+            <p class="timeline-desc">Prepared tax workpapers for 50+ clients across sole proprietorships, partnerships/LLCs, and S-corps.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Shift Lead</h3>
-          <p><strong>Juice House Company</strong> &bull; <em>Napa, CA</em> &bull; <em>Aug 2022 – Jan 2024</em></p>
-          <p>Reconciled $500–$2,000 in daily payments at $0.00 variance and trained 5 new hires.</p>
+
+        <!-- Juice House Company (Purple Dot) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Shift Lead</h3>
+            <p class="timeline-meta"><strong>Juice House Company</strong> &bull; <em>Napa, CA</em> &bull; <em>Aug 2022 – Jan 2024</em></p>
+            <p class="timeline-desc">Reconciled $500–$2,000 in daily payments at $0.00 variance and trained 5 new hires.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Connect Section -->
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Feel free to reach out for collaborations or questions!</p>
-      <ul class="bullet-list">
-        <li><strong>Email:</strong> <a href="mailto:kalynnloftis02@gmail.com">kalynnloftis02@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kalynn-loftis-60a675395" target="_blank" rel="noopener noreferrer">linkedin.com/in/kalynn-loftis-60a675395</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/kalynnloftis02" target="_blank" rel="noopener noreferrer">github.com/kalynnloftis02</a></li>
-        <li><strong>Location:</strong> Baton Rouge, LA</li>
-      </ul>
+      <h2>Connect</h2>
+      <div class="contact-buttons">
+        <a href="mailto:kalynnloftis02@gmail.com" class="btn-contact">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/kalynn-loftis-60a675395" target="_blank" rel="noopener noreferrer" class="btn-contact">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.54a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/kalynnloftis02" target="_blank" rel="noopener noreferrer" class="btn-contact">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          GitHub
+        </a>
+      </div>
+      <p class="contact-location">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Baton Rouge, LA
+      </p>
     </section>
   </main>
 
