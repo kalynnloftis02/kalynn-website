@@ -192,7 +192,7 @@ nav a.active::after {
 .hero-header {
   background: linear-gradient(135deg, var(--purple-main) 0%, var(--purple-dark) 100%);
   color: #FFFFFF;
-  padding: 3.25rem 0 4.25rem 0;
+  padding: 3.25rem 0 5.5rem 0;
   width: 100%;
   border-radius: 0 !important;
   border: none !important;
@@ -305,7 +305,7 @@ nav a.active::after {
   transform: translateY(-2px);
 }
 
-/* Quick-Stats Row (Overlaps Hero Bottom by 30px, Compact & Identical Height) */
+/* Quick-Stats Row (Overlaps Hero Bottom by 30px, Identical Height) */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -314,51 +314,51 @@ nav a.active::after {
   margin-bottom: 2rem;
   position: relative;
   z-index: 10;
-  align-items: stretch;
+  align-items: start;
 }
 
 .stat-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
+  border-top: 3px solid var(--gold);
   border-radius: var(--radius);
-  padding: 0.85rem 0.75rem;
+  padding: 28px 1rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(70, 29, 124, 0.08);
+  box-shadow: 0 4px 14px rgba(70, 29, 124, 0.09);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  min-height: 84px;
   transition: var(--transition);
 }
 
 .stat-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(70, 29, 124, 0.12);
+  box-shadow: 0 6px 18px rgba(70, 29, 124, 0.14);
 }
 
 .stat-value {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--purple-main);
-  line-height: 1.15;
-  margin-bottom: 0.3rem;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
 }
 
 .stat-value.stat-value-sm {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   white-space: nowrap;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .stat-label {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 /* Main Content Layout */
