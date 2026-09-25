@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Kalynn's Personal Website</title>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <title>Home | Kalynn Loftis - Accounting & Information Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <header>
@@ -20,25 +23,35 @@
     </div>
   </header>
 
+  <!-- Homepage Hero Header -->
+  <section class="hero-header">
+    <div class="hero-container">
+      <div class="hero-headshot-wrapper">
+        <img src="kalynn-headshot.jpg" alt="Professional headshot of Kalynn Loftis in business attire" class="hero-headshot">
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-name">Kalynn Loftis</h1>
+        <p class="hero-subline-1">Accounting &amp; Information Systems | LSU</p>
+        <p class="hero-subline-2">Incoming Audit &amp; Assurance Associate, Deloitte</p>
+        <div class="hero-buttons">
+          <a href="resume.html" class="btn btn-solid">View Resume</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main>
     <!-- Profile Section -->
     <section id="profile">
       <h2>Profile</h2>
-      <div class="profile-container" style="display: flex; align-items: center; gap: 2rem; margin-top: 1rem;">
-        <div class="profile-photo-wrapper" style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center;">
-          <img src="kalynn-headshot.jpg" alt="Professional headshot of Kalynn Loftis in business attire" class="profile-photo" style="width: 100%; height: 100%; object-fit: cover; object-position: center 45%; transform: scale(1.8) translateY(-4%); transform-origin: center 45%; display: block;">
-        </div>
-        <div class="profile-text" style="flex: 1;">
-          <p>I'm Kalynn Loftis, graduating December 2026 from LSU's E. J. Ourso College of Business with dual degrees: a B.S. in Accounting and a B.S. in Information Systems and Analytics (GPA 3.55). I have hands-on experience in audit and tax, and I'll be joining Deloitte as an Audit &amp; Assurance Associate in summer 2027.</p>
-          <p style="margin-bottom: 0;">Member of Alpha Kappa Psi Professional Business Fraternity and 2025 Jimmy Webb Memorial Merit-Based Scholarship winner.</p>
-        </div>
-      </div>
+      <p>I'm Kalynn Loftis, graduating December 2026 from LSU's E. J. Ourso College of Business with dual degrees: a B.S. in Accounting and a B.S. in Information Systems and Analytics (GPA 3.55). I have hands-on experience in audit and tax, and I'll be joining Deloitte as an Audit &amp; Assurance Associate in summer 2027.</p>
+      <p>Member of Alpha Kappa Psi Professional Business Fraternity and 2025 Jimmy Webb Memorial Merit-Based Scholarship winner.</p>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
       <h2>Skills</h2>
-      <p>A summary of technical proficiencies, tools, and methodologies:</p>
       <div class="tags">
         <span class="tag">Auditing</span>
         <span class="tag">GAAP &amp; FASB</span>
@@ -89,7 +102,12 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Kalynn Loftis. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="mailto:kalynnloftis02@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/kalynn-loftis-60a675395" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="https://github.com/kalynnloftis02" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Kalynn Loftis. All rights reserved.</p>
   </footer>
 </body>
 </html>
