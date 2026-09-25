@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <header>
@@ -23,89 +23,197 @@
     </div>
   </header>
 
-  <main>
-    <section id="resume-header">
-      <h1>Resume</h1>
-      <p>Comprehensive overview of education, professional experience, technical skills, and leadership involvement.</p>
-    </section>
+  <!-- Resume Page Banner (Edge-to-Edge, Square Corners) -->
+  <div class="page-banner">
+    <div class="page-banner-container">
+      <h1 class="page-banner-title">Resume</h1>
+      <div class="page-banner-divider"></div>
+      <p class="page-banner-subtitle">Accounting &amp; Information Systems | LSU</p>
+    </div>
+  </div>
 
+  <main>
+    <!-- Education Section -->
     <section id="education">
       <h2>Education</h2>
-      <div class="card">
-        <h3>Bachelor of Science, Accounting &bull; Bachelor of Science, Information Systems and Analytics</h3>
-        <p><strong>Louisiana State University (LSU), E. J. Ourso College of Business</strong> &bull; <em>Baton Rouge, LA</em> &bull; <em>Expected December 2026</em></p>
-        <p><strong>GPA:</strong> 3.6</p>
-        <p><strong>Related Coursework:</strong> Accounting Analytics, Intermediate Accounting I &amp; II, Information Systems Foundations, Database Management Systems, Managerial Accounting, Financial Accounting, Cyber Risk Management, Money and Banking Economics</p>
+      <div class="card education-card">
+        <h3 class="education-degree">Bachelor of Science, Accounting &bull; Bachelor of Science, Information Systems and Analytics</h3>
+        <p class="education-institution"><strong>Louisiana State University (LSU), E. J. Ourso College of Business</strong> &bull; <em>Baton Rouge, LA</em> &bull; <em>Expected December 2026</em></p>
+        <div class="education-gpa-container">
+          <div class="education-gpa-badge">
+            <strong>GPA:</strong> 3.6
+          </div>
+        </div>
+        <div class="education-coursework">
+          <p class="education-coursework-title">Related Coursework</p>
+          <div class="tags">
+            <span class="tag tag-sm">Accounting Analytics</span>
+            <span class="tag tag-sm">Intermediate Accounting I &amp; II</span>
+            <span class="tag tag-sm">Information Systems Foundations</span>
+            <span class="tag tag-sm">Database Management Systems</span>
+            <span class="tag tag-sm">Managerial Accounting</span>
+            <span class="tag tag-sm">Financial Accounting</span>
+            <span class="tag tag-sm">Cyber Risk Management</span>
+            <span class="tag tag-sm">Money and Banking Economics</span>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Experience Timeline Section -->
     <section id="work-history">
       <h2>Experience</h2>
-      <div class="card" style="margin-bottom: 1.5rem;">
-        <h3>Audit &amp; Assurance Intern</h3>
-        <p><strong>Deloitte</strong> &bull; <em>San Francisco, CA</em> &bull; <em>May 2026 – Aug 2026</em></p>
-        <ul class="bullet-list">
-          <li>Assisted with inventory cutoff testing by tracing receiving documents to transaction details and supporting documentation.</li>
-          <li>Rolled forward and updated audit workpapers to reflect current-year information.</li>
-          <li>Updated tick marks and audit documentation within inventory testing workpapers.</li>
-          <li>Assisted with cost of goods sold testing for completeness and cutoff by tracing source documents to general ledger details.</li>
-          <li>Recorded and documented engagement team members' independence information in audit workpapers.</li>
-        </ul>
-      </div>
+      <div class="timeline timeline-connected">
+        <!-- Deloitte (Most Recent - Gold Dot) -->
+        <div class="timeline-item">
+          <div class="timeline-dot dot-gold"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Audit &amp; Assurance Intern</h3>
+            <p class="timeline-meta"><strong>Deloitte</strong> &bull; <em>San Francisco, CA</em> &bull; <em>May 2026 – Aug 2026</em></p>
+            <ul class="bullet-list">
+              <li>Assisted with inventory cutoff testing by tracing receiving documents to transaction details and supporting documentation.</li>
+              <li>Rolled forward and updated audit workpapers to reflect current-year information.</li>
+              <li>Updated tick marks and audit documentation within inventory testing workpapers.</li>
+              <li>Assisted with cost of goods sold testing for completeness and cutoff by tracing source documents to general ledger details.</li>
+              <li>Recorded and documented engagement team members' independence information in audit workpapers.</li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="card" style="margin-bottom: 1.5rem;">
-        <h3>Tax Intern</h3>
-        <p><strong>Rainier Wealth Planning</strong> &bull; <em>Baton Rouge, LA</em> &bull; <em>Feb 2025 – May 2025</em></p>
-        <ul class="bullet-list">
-          <li>Prepared and assembled tax workpapers for 50+ clients across multiple entity types (sole proprietorships, partnerships/LLCs, S-corps), keeping files organized and ready for review.</li>
-          <li>Assisted with tax return preparation in Intuit ProConnect by applying deduction rules (standard vs. itemized, QBI deduction) and documenting findings.</li>
-          <li>Categorized income and expenses and kept client files accurate, complete, and confidential.</li>
-          <li>Reviewed and interpreted tax forms (W-2, K-1, 1099 series, 1098/1098-T), compared amounts to client-provided documentation, and flagged missing items or inconsistencies.</li>
-        </ul>
-      </div>
+        <!-- Rainier Wealth Planning (Purple Dot) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Tax Intern</h3>
+            <p class="timeline-meta"><strong>Rainier Wealth Planning</strong> &bull; <em>Baton Rouge, LA</em> &bull; <em>Feb 2025 – May 2025</em></p>
+            <ul class="bullet-list">
+              <li>Prepared and assembled tax workpapers for 50+ clients across multiple entity types (sole proprietorships, partnerships/LLCs, S-corps), keeping files organized and ready for review.</li>
+              <li>Assisted with tax return preparation in Intuit ProConnect by applying deduction rules (standard vs. itemized, QBI deduction) and documenting findings.</li>
+              <li>Categorized income and expenses and kept client files accurate, complete, and confidential.</li>
+              <li>Reviewed and interpreted tax forms (W-2, K-1, 1099 series, 1098/1098-T), compared amounts to client-provided documentation, and flagged missing items or inconsistencies.</li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="card">
-        <h3>Shift Lead</h3>
-        <p><strong>Juice House Company</strong> &bull; <em>Napa, CA</em> &bull; <em>Aug 2022 – Jan 2024</em></p>
-        <ul class="bullet-list">
-          <li>Accepted customer payments using Square and provided excellent customer service.</li>
-          <li>Built a reusable Canva template for social media posts, reducing turnaround time.</li>
-          <li>Tracked on-hand inventory during shifts and reported timely, accurate end-of-shift and closeout analyses to management.</li>
-          <li>Collected payments and issued refunds, documented approvals, and maintained an audit trail.</li>
-          <li>Troubleshot minor equipment and software problems, then documented and communicated findings to speed future resolutions.</li>
-          <li>Reconciled $500–$2,000/day in cash and card payments, closing the drawer at $0.00 variance every shift.</li>
-          <li>Trained 5 new hires on POS workflows, payment types, and receipt/invoice procedures.</li>
-          <li>Audited POS order entries and end-of-day reports to ensure accurate counts of items, tips, and discounts.</li>
-        </ul>
+        <!-- Juice House Company (Purple Dot) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Shift Lead</h3>
+            <p class="timeline-meta"><strong>Juice House Company</strong> &bull; <em>Napa, CA</em> &bull; <em>Aug 2022 – Jan 2024</em></p>
+            <ul class="bullet-list">
+              <li>Accepted customer payments using Square and provided excellent customer service.</li>
+              <li>Built a reusable Canva template for social media posts, reducing turnaround time.</li>
+              <li>Tracked on-hand inventory during shifts and reported timely, accurate end-of-shift and closeout analyses to management.</li>
+              <li>Collected payments and issued refunds, documented approvals, and maintained an audit trail.</li>
+              <li>Troubleshot minor equipment and software problems, then documented and communicated findings to speed future resolutions.</li>
+              <li>Reconciled $500–$2,000/day in cash and card payments, closing the drawer at $0.00 variance every shift.</li>
+              <li>Trained 5 new hires on POS workflows, payment types, and receipt/invoice procedures.</li>
+              <li>Audited POS order entries and end-of-day reports to ensure accurate counts of items, tips, and discounts.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Technical Skills Section -->
     <section id="skills">
       <h2>Technical Skills</h2>
-      <div class="tags">
-        <span class="tag">Oracle PL/SQL</span>
-        <span class="tag">Excel (pivot tables)</span>
-        <span class="tag">PowerPoint</span>
-        <span class="tag">Word</span>
-        <span class="tag">BI Tools</span>
-        <span class="tag">Database Management</span>
-        <span class="tag">Auditing</span>
-        <span class="tag">GAAP &amp; FASB Knowledge</span>
-        <span class="tag">Intuit ProConnect</span>
-        <span class="tag">Square &amp; POS Systems</span>
-        <span class="tag">Inventory Control</span>
-        <span class="tag">Purchase Orders</span>
-        <span class="tag">Petty Cash Management</span>
-        <span class="tag">Cash Handling</span>
-        <span class="tag">Customer Service</span>
+      <div class="skills-grid skills-grid-2x2">
+        <!-- Accounting & Audit Card -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
+              <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+              <path d="M12 6v2m0 8v2"/>
+            </svg>
+            <h3 class="skill-category-title">Accounting &amp; Audit</h3>
+          </div>
+          <div class="tags">
+            <span class="tag">Auditing</span>
+            <span class="tag">GAAP &amp; FASB Knowledge</span>
+            <span class="tag">Intuit ProConnect</span>
+            <span class="tag">Inventory Control</span>
+            <span class="tag">Purchase Orders</span>
+            <span class="tag">Petty Cash Management</span>
+          </div>
+        </div>
+
+        <!-- Data & Technology Card -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M3 5V19A9 3 0 0 0 21 19V5"/>
+              <path d="M3 12A9 3 0 0 0 21 12"/>
+            </svg>
+            <h3 class="skill-category-title">Data &amp; Technology</h3>
+          </div>
+          <div class="tags">
+            <span class="tag">Oracle PL/SQL</span>
+            <span class="tag">Database Management</span>
+            <span class="tag">BI Tools</span>
+            <span class="tag">Excel (pivot tables)</span>
+          </div>
+        </div>
+
+        <!-- Business Software Card -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="14" x="2" y="3" rx="2"/>
+              <line x1="8" x2="16" y1="21" y2="21"/>
+              <line x1="12" x2="12" y1="17" y2="21"/>
+            </svg>
+            <h3 class="skill-category-title">Business Software</h3>
+          </div>
+          <div class="tags">
+            <span class="tag">PowerPoint</span>
+            <span class="tag">Word</span>
+            <span class="tag">Square &amp; POS Systems</span>
+          </div>
+        </div>
+
+        <!-- Professional Skills Card -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <h3 class="skill-category-title">Professional Skills</h3>
+          </div>
+          <div class="tags">
+            <span class="tag">Cash Handling</span>
+            <span class="tag">Customer Service</span>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Campus Involvement & Awards Section -->
     <section id="involvement-awards">
       <h2>Campus Involvement &amp; Awards</h2>
-      <ul class="bullet-list">
-        <li>Alpha Kappa Psi Professional Business Fraternity, Member</li>
-        <li>2025 Jimmy Webb Memorial Merit-Based Scholarship Winner</li>
+      <ul class="involvement-list">
+        <li class="involvement-item">
+          <svg class="involvement-icon icon-purple" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span>Alpha Kappa Psi Professional Business Fraternity, Member</span>
+        </li>
+        <li class="involvement-item item-gold">
+          <svg class="involvement-icon icon-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="7"/>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+          </svg>
+          <span>2025 Jimmy Webb Memorial Merit-Based Scholarship Winner</span>
+        </li>
       </ul>
     </section>
   </main>

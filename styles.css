@@ -263,6 +263,49 @@ nav a.active::after {
   flex-wrap: wrap;
 }
 
+/* Page Banner (Shorter Hero Header for Inner Pages) */
+.page-banner {
+  background: linear-gradient(135deg, var(--purple-main) 0%, var(--purple-dark) 100%);
+  color: #FFFFFF;
+  padding: 2.25rem 0 2.5rem 0;
+  width: 100%;
+  border-radius: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.page-banner-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page-banner-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 0.45rem;
+}
+
+.page-banner-divider {
+  width: 48px;
+  height: 3px;
+  background-color: var(--gold);
+  border-radius: 2px;
+  margin-bottom: 0.65rem;
+}
+
+.page-banner-subtitle {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--lavender-light);
+  margin-bottom: 0;
+  letter-spacing: 0.2px;
+}
+
 /* Hero Action Buttons */
 .btn {
   display: inline-flex;
@@ -411,10 +454,79 @@ main section {
   border-left-color: var(--gold);
 }
 
+/* Education Card */
+.education-card {
+  border-left: 4px solid var(--purple-main) !important;
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+}
+
+.education-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(70, 29, 124, 0.08);
+}
+
+.education-degree {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--purple-main);
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.education-institution {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.education-institution strong {
+  color: var(--purple-dark);
+}
+
+.education-gpa-container {
+  margin-bottom: 1.15rem;
+}
+
+.education-gpa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--lavender-tag);
+  border: 1px solid rgba(70, 29, 124, 0.12);
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--purple-dark);
+}
+
+.education-gpa-badge strong {
+  color: var(--purple-main);
+}
+
+.education-coursework {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.95rem;
+}
+
+.education-coursework-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--purple-dark);
+  margin-bottom: 0.55rem;
+}
+
 /* Skills 3-Card Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skills-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -476,6 +588,11 @@ main section {
 .tag:hover {
   background-color: #E2D7F0;
   color: var(--purple-main);
+}
+
+.tag-sm {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.7rem;
 }
 
 /* Vertical Experience Timeline */
@@ -562,6 +679,38 @@ main section {
   margin-bottom: 0;
 }
 
+.timeline-content .bullet-list {
+  padding-left: 1.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.timeline-content .bullet-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text-body);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.timeline-content .bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Connect timeline dots cleanly without trailing line */
+.timeline-connected::before {
+  display: none !important;
+}
+
+.timeline-connected .timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 18px;
+  bottom: -1.75rem;
+  width: 2px;
+  background-color: var(--lavender-line);
+}
+
 /* Contact / Connect Section & Purple Buttons */
 .contact-buttons {
   display: flex;
@@ -625,6 +774,53 @@ ul.bullet-list {
 ul.bullet-list li {
   margin-bottom: 0.45rem;
   color: var(--text-body);
+}
+
+/* Campus Involvement & Awards Styled List */
+.involvement-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+  padding-left: 0;
+}
+
+.involvement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--purple-main);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.98rem;
+  color: var(--text-body);
+  transition: var(--transition);
+}
+
+.involvement-item.item-gold {
+  border-left-color: var(--gold);
+}
+
+.involvement-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(70, 29, 124, 0.08);
+}
+
+.involvement-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.involvement-icon.icon-purple {
+  color: var(--purple-main);
+}
+
+.involvement-icon.icon-gold {
+  color: var(--gold);
 }
 
 /* Footer */
@@ -762,5 +958,34 @@ footer {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .page-banner {
+    padding: 1.75rem 0 2rem 0;
+  }
+
+  .page-banner-container {
+    padding: 0 1rem;
+  }
+
+  .page-banner-title {
+    font-size: 1.85rem;
+  }
+
+  .page-banner-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .skills-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-connected .timeline-item:not(:last-child)::after {
+    left: -21px;
+  }
+
+  .involvement-item {
+    padding: 0.85rem 1rem;
+    font-size: 0.92rem;
   }
 }
