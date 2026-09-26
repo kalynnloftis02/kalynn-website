@@ -43,21 +43,21 @@
 
   <main>
     <!-- Quick-Stats Row (Overlapping the Hero by 30px) -->
-    <div class="stats-row">
+    <div class="stats-row countup-group">
       <div class="stat-card">
-        <div class="stat-value" aria-label="3.6">3.6</div>
+        <div class="stat-value" aria-label="3.6" data-countup="3.6" data-countup-decimals="1">3.6</div>
         <div class="stat-label">GPA</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">Big 4</div>
+        <div class="stat-value" data-countup-fade>Big 4</div>
         <div class="stat-label">Audit Experience</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value" aria-label="2">2</div>
+        <div class="stat-value" aria-label="2" data-countup="2">2</div>
         <div class="stat-label">Internships</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value stat-value-sm">Alpha Kappa Psi</div>
+        <div class="stat-value stat-value-sm" data-countup-fade>Alpha Kappa Psi</div>
         <div class="stat-label">Professional Business Fraternity</div>
       </div>
     </div>
@@ -194,90 +194,6 @@
     <p class="footer-copy">&copy; 2026 Kalynn Loftis. All rights reserved.</p>
   </footer>
 
-  <script>
-    (function () {
-      // Skip animation if the visitor prefers reduced motion
-      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        return;
-      }
-
-      var statsRow = document.querySelector('.stats-row');
-      if (!statsRow) return;
-
-      var countItems = [
-        { el: document.querySelector('.stats-row .stat-card:nth-child(1) .stat-value'), target: 3.6, decimals: 1 },
-        { el: document.querySelector('.stats-row .stat-card:nth-child(3) .stat-value'), target: 2, decimals: 0 }
-      ];
-
-      var fadeItems = [
-        document.querySelector('.stats-row .stat-card:nth-child(2) .stat-value'),
-        document.querySelector('.stats-row .stat-card:nth-child(4) .stat-value')
-      ];
-
-      if (!countItems[0].el || !countItems[1].el || !fadeItems[0] || !fadeItems[1]) {
-        return;
-      }
-
-      function startAnimation() {
-        var duration = 2000; // ~2 seconds
-        var startTime = null;
-
-        // Initialize values as animation begins
-        countItems.forEach(function (item) {
-          item.el.textContent = (0).toFixed(item.decimals);
-        });
-        fadeItems.forEach(function (el) {
-          el.style.opacity = '0';
-        });
-
-        function step(timestamp) {
-          if (!startTime) startTime = timestamp;
-          var elapsed = timestamp - startTime;
-          var progress = Math.min(elapsed / duration, 1);
-          // Ease-out cubic for smooth deceleration at the end
-          var eased = 1 - Math.pow(1 - progress, 3);
-
-          countItems.forEach(function (item) {
-            var current = item.target * eased;
-            item.el.textContent = item.decimals > 0 ? current.toFixed(item.decimals) : Math.round(current);
-          });
-
-          fadeItems.forEach(function (el) {
-            el.style.opacity = eased;
-          });
-
-          if (progress < 1) {
-            requestAnimationFrame(step);
-          } else {
-            // Guarantee exact final numbers at completion
-            countItems.forEach(function (item) {
-              item.el.textContent = item.decimals > 0 ? item.target.toFixed(item.decimals) : item.target;
-            });
-            fadeItems.forEach(function (el) {
-              el.style.opacity = '';
-            });
-          }
-        }
-
-        requestAnimationFrame(step);
-      }
-
-      // Start animation when stats row scrolls into view (run only once)
-      if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function (entries, obs) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              obs.unobserve(entry.target);
-              startAnimation();
-            }
-          });
-        }, { threshold: 0.15 });
-
-        observer.observe(statsRow);
-      } else {
-        startAnimation();
-      }
-    })();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
