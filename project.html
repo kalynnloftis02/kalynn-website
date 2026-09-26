@@ -7,7 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=7">
+  <!-- Chart.js via CDNJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
 <body>
   <header>
@@ -23,46 +25,205 @@
     </div>
   </header>
 
+  <!-- Projects Page Banner (Edge-to-Edge, Square Corners) -->
+  <div class="page-banner">
+    <div class="page-banner-container">
+      <h1 class="page-banner-title">Projects</h1>
+      <div class="page-banner-divider"></div>
+      <p class="page-banner-subtitle">Cyber risk and data analytics</p>
+    </div>
+  </div>
+
   <main>
-    <section id="projects-intro">
-      <h1>Projects</h1>
-      <p>A portfolio showcase of my personal, academic, and open-source projects.</p>
-    </section>
+    <!-- Featured Project Section -->
+    <section id="featured-project">
+      <div class="featured-badge">
+        <svg class="featured-badge-icon" viewBox="0 0 24 24">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        <span>Featured Project</span>
+      </div>
 
-    <section id="featured-projects">
-      <h2>Featured Works</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Project Title One</h3>
-          <p>[Brief description of the problem solved, architecture used, or unique features developed.]</p>
-          <div class="tags">
-            <span class="tag">HTML/CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <p style="margin-top: 1rem;"><a href="#" target="_blank" rel="noopener noreferrer">View Live Demo &rarr;</a> | <a href="#" target="_blank" rel="noopener noreferrer">Source Code</a></p>
+      <h2 class="project-headline">Breach Risk Assessment: Medical Sector</h2>
+      <p class="project-subhead">Group project &bull; ISDS 4096, LSU &bull; Spring 2025</p>
+
+      <div class="tags" style="margin-bottom: 1.5rem;">
+        <span class="tag">Excel</span>
+        <span class="tag">NIST SP 800-30</span>
+        <span class="tag">Pivot Tables</span>
+        <span class="tag">Percentile Analysis</span>
+      </div>
+
+      <!-- Quick Stats Grid (4 Cards) -->
+      <div class="project-stats-grid">
+        <div class="project-stat-card">
+          <div class="project-stat-val">5,141</div>
+          <div class="project-stat-lbl">Breaches analyzed</div>
         </div>
-
-        <div class="card">
-          <h3>Project Title Two</h3>
-          <p>[Brief description of the project goals, tech stack, and your key contributions.]</p>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">API</span>
-          </div>
-          <p style="margin-top: 1rem;"><a href="#" target="_blank" rel="noopener noreferrer">View Live Demo &rarr;</a> | <a href="#" target="_blank" rel="noopener noreferrer">Source Code</a></p>
+        <div class="project-stat-card">
+          <div class="project-stat-val">3.6&times;</div>
+          <div class="project-stat-lbl">Rise, 2010&ndash;2022</div>
         </div>
-
-        <div class="card">
-          <h3>Project Title Three</h3>
-          <p>[Brief overview of another exciting project or case study.]</p>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Database</span>
-          </div>
-          <p style="margin-top: 1rem;"><a href="#" target="_blank" rel="noopener noreferrer">View Live Demo &rarr;</a> | <a href="#" target="_blank" rel="noopener noreferrer">Source Code</a></p>
+        <div class="project-stat-card">
+          <div class="project-stat-val">3,252</div>
+          <div class="project-stat-lbl">Median records per breach</div>
+        </div>
+        <div class="project-stat-card">
+          <div class="project-stat-val">78.8M</div>
+          <div class="project-stat-lbl">Largest single breach</div>
         </div>
       </div>
     </section>
+
+    <!-- Interactive Bar Chart Section -->
+    <section id="chart-section">
+      <h2>Breaches per year</h2>
+      <div class="chart-container-box">
+        <canvas id="breachesChart" role="img" aria-label="Interactive bar chart illustrating medical data breaches per year from 2010 to 2022. Breaches expanded from 199 in 2010 to 719 in 2022, representing a 3.6x surge over the study window."></canvas>
+      </div>
+      <p class="chart-caption">
+        <em>Data covers healthcare breach incidents from 2010 to 2022. Hover over any bar to view exact breach counts.</em>
+      </p>
+    </section>
+
+    <!-- My Role Section -->
+    <section id="my-role">
+      <h2>My Role</h2>
+      <div class="my-role-grid">
+        <div class="my-role-image-col">
+          <img src="breach-records-percentile.png" alt="Statistical chart created in Excel displaying breach record distribution by percentile, highlighting a median of 3,252 records and a steep upward trajectory for top breaches" class="project-chart-img">
+        </div>
+        <div class="my-role-text-col">
+          <p class="my-role-text">
+            I built the statistical analysis of breach size in Excel. Most breaches were small, with a median of 3,252 records, but a handful were enormous: the top 1% exceeded 1.2 million records each, and the largest (Anthem, 2015) exposed 78.8 million.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Threats and Controls Section -->
+    <section id="threats-controls">
+      <h2>Top Threats and Controls</h2>
+      <div class="threat-control-list">
+        <!-- Threat 1 -->
+        <div class="threat-control-row">
+          <div class="threat-col">
+            <span>Hacking/IT Incident</span>
+            <span class="threat-count">2,480</span>
+          </div>
+          <div class="tc-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="control-col-theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Firewalls and network security</span>
+          </div>
+        </div>
+
+        <!-- Threat 2 -->
+        <div class="threat-control-row">
+          <div class="threat-col">
+            <span>Unauthorized Access/Disclosure</span>
+            <span class="threat-count">1,279</span>
+          </div>
+          <div class="tc-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="control-col-theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>Two-factor authentication</span>
+          </div>
+        </div>
+
+        <!-- Threat 3 -->
+        <div class="threat-control-row">
+          <div class="threat-col">
+            <span>Theft</span>
+            <span class="threat-count">981</span>
+          </div>
+          <div class="tc-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="control-col-theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>Employee training</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2024 Incidents We Studied Section -->
+    <section id="incidents">
+      <h2>2024 Incidents We Studied</h2>
+      <div class="incidents-grid">
+        <!-- Incident 1 -->
+        <div class="incident-card">
+          <h3 class="incident-name">Change Healthcare</h3>
+          <div class="incident-date">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>February 2024</span>
+          </div>
+        </div>
+
+        <!-- Incident 2 -->
+        <div class="incident-card">
+          <h3 class="incident-name">Kaiser Foundation Health Plan</h3>
+          <div class="incident-date">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>April 2024</span>
+          </div>
+        </div>
+
+        <!-- Incident 3 -->
+        <div class="incident-card">
+          <h3 class="incident-name">Ascension Health</h3>
+          <div class="incident-date">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>May 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <div class="project-footer-nav">
+      <a href="index.html" class="btn btn-outline">&larr; Back to Home</a>
+      <a href="resume.html" class="btn btn-solid">View Resume &rarr;</a>
+    </div>
   </main>
 
   <footer>
@@ -73,5 +234,96 @@
     </ul>
     <p class="footer-copy">&copy; 2026 Kalynn Loftis. All rights reserved.</p>
   </footer>
+
+  <!-- Chart.js Initialization -->
+  <script>
+    (function () {
+      var ctx = document.getElementById('breachesChart');
+      if (!ctx || typeof Chart === 'undefined') return;
+
+      var years = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'];
+      var breachesData = [199, 200, 218, 276, 314, 270, 329, 358, 369, 511, 662, 715, 719];
+
+      new Chart(ctx.getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels: years,
+          datasets: [{
+            label: 'Breaches',
+            data: breachesData,
+            backgroundColor: '#461D7C',
+            hoverBackgroundColor: '#F2C94C',
+            borderRadius: 4,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              backgroundColor: '#3A1868',
+              titleColor: '#F2C94C',
+              bodyColor: '#FFFFFF',
+              titleFont: {
+                family: 'Inter, sans-serif',
+                size: 13,
+                weight: '600'
+              },
+              bodyFont: {
+                family: 'Inter, sans-serif',
+                size: 13,
+                weight: '500'
+              },
+              padding: 10,
+              cornerRadius: 6,
+              displayColors: false,
+              callbacks: {
+                title: function(items) {
+                  return 'Year ' + items[0].label;
+                },
+                label: function(context) {
+                  return context.parsed.y.toLocaleString() + ' breaches';
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false
+              },
+              ticks: {
+                font: {
+                  family: 'Inter, sans-serif',
+                  size: 12
+                },
+                color: '#5E6778'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              grid: {
+                color: '#E8E2EE'
+              },
+              ticks: {
+                font: {
+                  family: 'Inter, sans-serif',
+                  size: 12
+                },
+                color: '#5E6778',
+                callback: function(val) {
+                  return val.toLocaleString();
+                }
+              }
+            }
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
