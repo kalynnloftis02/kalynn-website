@@ -192,7 +192,7 @@ nav a.active::after {
 .hero-header {
   background: linear-gradient(135deg, var(--purple-main) 0%, var(--purple-dark) 100%);
   color: #FFFFFF;
-  padding: 3.25rem 0 5.5rem 0;
+  padding: 3.25rem 0 3.5rem 0;
   width: 100%;
   border-radius: 0 !important;
   border: none !important;
@@ -348,16 +348,16 @@ nav a.active::after {
   transform: translateY(-2px);
 }
 
-/* Quick-Stats Row (Overlaps Hero Bottom by 30px, Identical Height) */
+/* Quick-Stats Row (Floats over hero bottom by 40px, equal height) */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-top: -30px;
+  margin-top: -40px;
   margin-bottom: 2rem;
   position: relative;
   z-index: 10;
-  align-items: start;
+  align-items: stretch;
 }
 
 .stat-card {
@@ -365,12 +365,12 @@ nav a.active::after {
   border: 1px solid var(--border-color);
   border-top: 3px solid var(--gold);
   border-radius: var(--radius);
-  padding: 28px 1rem;
+  padding: 1.6rem 1rem;
   text-align: center;
   box-shadow: 0 4px 14px rgba(70, 29, 124, 0.09);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   transition: var(--transition);
 }
@@ -421,6 +421,11 @@ main section {
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 2px 6px rgba(70, 29, 124, 0.04);
+}
+
+/* About Me prose: comfortable reading width */
+#about-me .prose {
+  max-width: 62ch;
 }
 
 /* Grids */
@@ -1164,13 +1169,14 @@ footer {
   .stats-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
-    margin-top: -30px;
+    margin-top: -40px;
     margin-bottom: 1.5rem;
+    align-items: stretch;
   }
 
   .stat-card {
-    padding: 0.75rem 0.5rem;
-    min-height: 76px;
+    padding: 1.15rem 0.5rem;
+    min-height: 80px;
   }
 
   .stat-value {
