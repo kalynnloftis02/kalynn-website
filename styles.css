@@ -301,7 +301,7 @@ nav a.active::after {
 .page-banner-subtitle {
   font-size: 1.05rem;
   font-weight: 500;
-  color: var(--lavender-light);
+  color: var(--gold);
   margin-bottom: 0;
   letter-spacing: 0.2px;
 }
