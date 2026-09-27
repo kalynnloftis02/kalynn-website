@@ -425,7 +425,7 @@ main section {
 
 /* About Me prose: comfortable reading width */
 #about-me .prose {
-  max-width: 62ch;
+  max-width: 75ch;
 }
 
 /* Grids */
